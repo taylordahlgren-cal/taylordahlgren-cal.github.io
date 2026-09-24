@@ -27,3 +27,14 @@ exclude:
   - PLAN.md
   - Gemfile
   - Gemfile.lock
+  - vendor
+  - node_modules
+  - artifacts
+  - lib
+  - scripts
+  - .cache
+  - .local
+  - .conversation
+  - .agents
+  - .replit
+  - screenshots
