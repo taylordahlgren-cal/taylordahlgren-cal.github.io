@@ -27,6 +27,7 @@ exclude:
   - PLAN.md
   - Gemfile
   - Gemfile.lock
+  - attached_assets
   - vendor
   - node_modules
   - artifacts

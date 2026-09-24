@@ -88,8 +88,22 @@ body::before {
     linear-gradient(90deg, color-mix(in srgb, var(--paper) 8%, transparent), color-mix(in srgb, var(--paper) 78%, transparent) 34%, color-mix(in srgb, var(--paper) 88%, transparent) 50%, color-mix(in srgb, var(--paper) 78%, transparent) 66%, color-mix(in srgb, var(--paper) 8%, transparent)),
     url("../images/contour-field.svg") center bottom / cover no-repeat;
   content: "";
-  opacity: 0.42;
+  opacity: 0.58;
   pointer-events: none;
+}
+
+:root[data-theme="dark"] body::before {
+  background: url("../images/contour-field.svg") center bottom / cover no-repeat;
+  filter: invert(1);
+  opacity: 0.27;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) body::before {
+    background: url("../images/contour-field.svg") center bottom / cover no-repeat;
+    filter: invert(1);
+    opacity: 0.27;
+  }
 }
 
 a {
@@ -552,7 +566,7 @@ h4 {
 
   .home-wrap {
     min-height: 0;
-    padding-top: 3.2rem;
+    padding-top: 10rem;
     padding-bottom: 5rem;
   }
 
@@ -568,9 +582,26 @@ h4 {
 
 @media (max-width: 560px) {
   body::before {
-    background-position: 43% bottom;
-    background-size: auto 100%;
-    opacity: 0.28;
+    background-position: center, center top;
+    background-size: auto, 880px auto;
+    background-repeat: no-repeat, repeat-y;
+    opacity: 0.5;
+  }
+
+  :root[data-theme="dark"] body::before {
+    background-position: center top;
+    background-size: 880px auto;
+    background-repeat: repeat-y;
+    opacity: 0.32;
+  }
+}
+
+@media (max-width: 560px) and (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) body::before {
+    background-position: center top;
+    background-size: 880px auto;
+    background-repeat: repeat-y;
+    opacity: 0.32;
   }
 }
 
