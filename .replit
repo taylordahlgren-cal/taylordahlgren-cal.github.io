@@ -2,3 +2,7 @@ modules = ["ruby-3.2"]
 
 [workflows]
 runButton = "Project"
+
+[[ports]]
+localPort = 5000
+externalPort = 80
