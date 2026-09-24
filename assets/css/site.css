@@ -13,6 +13,7 @@
   --citrus: #d4a64a;
   --coral: #bd715a;
   --focus: #9b4e32;
+  --button-ink: #fffdf5;
   --shadow: 0 18px 46px rgb(28 48 40 / 8%);
   --serif: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
   --sans: "Avenir Next", Avenir, "Segoe UI", sans-serif;
@@ -35,6 +36,7 @@
   --citrus: #edc76e;
   --coral: #e1997d;
   --focus: #f2b48d;
+  --button-ink: #17231f;
   --shadow: 0 18px 46px rgb(0 0 0 / 22%);
 }
 
@@ -54,6 +56,7 @@
     --citrus: #edc76e;
     --coral: #e1997d;
     --focus: #f2b48d;
+    --button-ink: #17231f;
     --shadow: 0 18px 46px rgb(0 0 0 / 22%);
   }
 }
@@ -85,24 +88,45 @@ body::before {
   z-index: -1;
   inset: 0;
   background:
-    linear-gradient(90deg, color-mix(in srgb, var(--paper) 8%, transparent), color-mix(in srgb, var(--paper) 78%, transparent) 34%, color-mix(in srgb, var(--paper) 88%, transparent) 50%, color-mix(in srgb, var(--paper) 78%, transparent) 66%, color-mix(in srgb, var(--paper) 8%, transparent)),
-    url("../images/contour-field.svg") center bottom / cover no-repeat;
+    linear-gradient(90deg, var(--paper) 0%, color-mix(in srgb, var(--paper) 98%, transparent) 30%, color-mix(in srgb, var(--paper) 86%, transparent) 60%, color-mix(in srgb, var(--paper) 22%, transparent) 100%),
+    url("../images/ridge-contours.svg") center center / cover no-repeat;
   content: "";
-  opacity: 0.58;
   pointer-events: none;
 }
 
 :root[data-theme="dark"] body::before {
-  background: url("../images/contour-field.svg") center bottom / cover no-repeat;
+  background:
+    linear-gradient(90deg, var(--paper) 0%, color-mix(in srgb, var(--paper) 98%, transparent) 30%, color-mix(in srgb, var(--paper) 86%, transparent) 60%, color-mix(in srgb, var(--paper) 22%, transparent) 100%),
+    url("../images/ridge-contours.svg") center center / cover no-repeat;
+}
+
+:root[data-theme="dark"] body::after {
+  position: fixed;
+  z-index: -1;
+  inset: 0;
+  background: url("../images/ridge-contours.svg") center center / cover no-repeat;
+  content: "";
   filter: invert(1);
-  opacity: 0.27;
+  opacity: 0.2;
+  pointer-events: none;
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) body::before {
-    background: url("../images/contour-field.svg") center bottom / cover no-repeat;
+    background:
+      linear-gradient(90deg, var(--paper) 0%, color-mix(in srgb, var(--paper) 98%, transparent) 30%, color-mix(in srgb, var(--paper) 86%, transparent) 60%, color-mix(in srgb, var(--paper) 22%, transparent) 100%),
+      url("../images/ridge-contours.svg") center center / cover no-repeat;
+  }
+
+  :root:not([data-theme="light"]) body::after {
+    position: fixed;
+    z-index: -1;
+    inset: 0;
+    background: url("../images/ridge-contours.svg") center center / cover no-repeat;
+    content: "";
     filter: invert(1);
-    opacity: 0.27;
+    opacity: 0.2;
+    pointer-events: none;
   }
 }
 
@@ -262,11 +286,8 @@ button {
 }
 
 .home-wrap {
-  display: flex;
-  min-height: min(890px, calc(100vh - 82px));
-  align-items: center;
-  padding-top: clamp(4.5rem, 10vw, 8rem);
-  padding-bottom: clamp(6rem, 14vw, 11rem);
+  padding-top: clamp(4rem, 8vh, 6rem);
+  padding-bottom: clamp(5rem, 10vw, 8rem);
 }
 
 .home-content,
@@ -276,11 +297,18 @@ button {
 }
 
 .home-content {
-  padding: clamp(1.5rem, 4vw, 3rem);
-  border: 1px solid color-mix(in srgb, var(--line) 72%, transparent);
-  background: color-mix(in srgb, var(--paper) 78%, transparent);
-  box-shadow: 0 24px 80px rgb(24 40 34 / 8%);
-  backdrop-filter: blur(10px);
+  width: min(780px, 100%);
+  margin-left: 0;
+}
+
+.home-content > h1 {
+  max-width: 100%;
+  font-size: clamp(3.1rem, 5.6vw, 4.7rem);
+  line-height: 1.04;
+}
+
+.home-content > h2:first-of-type {
+  margin-top: clamp(8rem, 23vh, 12rem);
 }
 
 .eyebrow {
@@ -348,7 +376,7 @@ h4 {
 }
 
 .home-content > p:not(.eyebrow):not(.home-actions):not(.closing-link) {
-  max-width: 68ch;
+  max-width: 58ch;
   color: var(--ink-soft);
   font-size: clamp(1.02rem, 1.5vw, 1.12rem);
 }
@@ -386,12 +414,12 @@ h4 {
 
 .button-primary {
   background: var(--forest-deep);
-  color: #fffdf5;
+  color: var(--button-ink);
 }
 
 .button-primary:hover {
   background: var(--coral);
-  color: #fff;
+  color: var(--button-ink);
 }
 
 .text-link {
@@ -565,14 +593,16 @@ h4 {
   }
 
   .home-wrap {
-    min-height: 0;
-    padding-top: 10rem;
-    padding-bottom: 5rem;
+    padding-top: 7rem;
+    padding-bottom: 4rem;
   }
 
-  .home-content {
-    padding: 1.25rem;
-    background: color-mix(in srgb, var(--paper) 86%, transparent);
+  .home-content > h1 {
+    font-size: clamp(2.7rem, 9vw, 3.7rem);
+  }
+
+  .home-content > h2:first-of-type {
+    margin-top: 8rem;
   }
 
   .page-wrap {
@@ -582,26 +612,33 @@ h4 {
 
 @media (max-width: 560px) {
   body::before {
-    background-position: center, center top;
-    background-size: auto, 880px auto;
-    background-repeat: no-repeat, repeat-y;
-    opacity: 0.5;
+    background:
+      linear-gradient(180deg, color-mix(in srgb, var(--paper) 68%, transparent) 0%, var(--paper) 49%, color-mix(in srgb, var(--paper) 77%, transparent) 100%),
+      url("../images/ridge-contours.svg") 60% top / 700px auto repeat-y;
   }
 
   :root[data-theme="dark"] body::before {
-    background-position: center top;
-    background-size: 880px auto;
-    background-repeat: repeat-y;
-    opacity: 0.32;
+    background:
+      linear-gradient(180deg, color-mix(in srgb, var(--paper) 72%, transparent) 0%, var(--paper) 49%, color-mix(in srgb, var(--paper) 80%, transparent) 100%),
+      url("../images/ridge-contours.svg") 60% top / 700px auto repeat-y;
+  }
+
+  :root[data-theme="dark"] body::after {
+    background: url("../images/ridge-contours.svg") 60% top / 700px auto repeat-y;
+    opacity: 0.12;
   }
 }
 
 @media (max-width: 560px) and (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) body::before {
-    background-position: center top;
-    background-size: 880px auto;
-    background-repeat: repeat-y;
-    opacity: 0.32;
+    background:
+      linear-gradient(180deg, color-mix(in srgb, var(--paper) 72%, transparent) 0%, var(--paper) 49%, color-mix(in srgb, var(--paper) 80%, transparent) 100%),
+      url("../images/ridge-contours.svg") 60% top / 700px auto repeat-y;
+  }
+
+  :root:not([data-theme="light"]) body::after {
+    background: url("../images/ridge-contours.svg") 60% top / 700px auto repeat-y;
+    opacity: 0.12;
   }
 }
 
