@@ -68,17 +68,28 @@ html {
 }
 
 body {
+  position: relative;
   min-width: 320px;
   margin: 0;
-  background:
-    radial-gradient(ellipse at 95% 3%, rgb(212 166 74 / 8%), transparent 26rem),
-    var(--paper);
+  background: var(--paper);
   color: var(--ink);
   font-family: var(--sans);
   font-size: 1rem;
   line-height: 1.72;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+}
+
+body::before {
+  position: fixed;
+  z-index: -1;
+  inset: 0;
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--paper) 8%, transparent), color-mix(in srgb, var(--paper) 78%, transparent) 34%, color-mix(in srgb, var(--paper) 88%, transparent) 50%, color-mix(in srgb, var(--paper) 78%, transparent) 66%, color-mix(in srgb, var(--paper) 8%, transparent)),
+    url("../images/contour-field.svg") center bottom / cover no-repeat;
+  content: "";
+  opacity: 0.42;
+  pointer-events: none;
 }
 
 a {
@@ -120,10 +131,12 @@ button {
 }
 
 .site-header {
-  position: relative;
+  position: sticky;
   z-index: 2;
+  top: 0;
   border-bottom: 1px solid var(--line);
-  background: color-mix(in srgb, var(--paper) 92%, transparent);
+  background: color-mix(in srgb, var(--paper) 84%, transparent);
+  backdrop-filter: blur(14px);
 }
 
 .header-inner,
@@ -235,39 +248,25 @@ button {
 }
 
 .home-wrap {
-  padding-top: clamp(1.3rem, 3vw, 2.25rem);
-}
-
-.landscape {
-  position: relative;
-  margin: 0 0 clamp(2.2rem, 5vw, 4rem);
-  border: 1px solid var(--line);
-  border-radius: 0.35rem;
-  background: #f7f5ed;
-}
-
-.landscape img {
-  display: block;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 1440 / 530;
-  object-fit: cover;
-}
-
-.landscape figcaption {
-  padding: 0.55rem clamp(0.65rem, 2vw, 1.25rem);
-  border-top: 1px solid var(--line);
-  color: #40534b;
-  font-size: clamp(0.68rem, 1.4vw, 0.76rem);
-  letter-spacing: 0.01em;
-  line-height: 1.5;
-  text-align: right;
+  display: flex;
+  min-height: min(890px, calc(100vh - 82px));
+  align-items: center;
+  padding-top: clamp(4.5rem, 10vw, 8rem);
+  padding-bottom: clamp(6rem, 14vw, 11rem);
 }
 
 .home-content,
 .page-content {
   width: min(var(--reading-width), 100%);
   margin-inline: auto;
+}
+
+.home-content {
+  padding: clamp(1.5rem, 4vw, 3rem);
+  border: 1px solid color-mix(in srgb, var(--line) 72%, transparent);
+  background: color-mix(in srgb, var(--paper) 78%, transparent);
+  box-shadow: 0 24px 80px rgb(24 40 34 / 8%);
+  backdrop-filter: blur(10px);
 }
 
 .eyebrow {
@@ -487,7 +486,8 @@ h4 {
 
 .site-footer {
   border-top: 1px solid var(--line);
-  background: var(--surface-soft);
+  background: color-mix(in srgb, var(--surface-soft) 88%, transparent);
+  backdrop-filter: blur(12px);
 }
 
 .footer-inner {
@@ -550,16 +550,27 @@ h4 {
     font-size: 0.72rem;
   }
 
-  .landscape {
-    margin-bottom: 2.2rem;
+  .home-wrap {
+    min-height: 0;
+    padding-top: 3.2rem;
+    padding-bottom: 5rem;
   }
 
-  .home-wrap {
-    padding-top: 1rem;
+  .home-content {
+    padding: 1.25rem;
+    background: color-mix(in srgb, var(--paper) 86%, transparent);
   }
 
   .page-wrap {
     padding-bottom: 3.6rem;
+  }
+}
+
+@media (max-width: 560px) {
+  body::before {
+    background-position: 43% bottom;
+    background-size: auto 100%;
+    opacity: 0.28;
   }
 }
 
