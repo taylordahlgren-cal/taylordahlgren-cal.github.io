@@ -1,0 +1,15 @@
+---
+layout: default
+---
+<div class="page-wrap content-wrap">
+  <article class="page-content">
+    <header class="page-heading">
+      <p class="eyebrow"><span class="eyebrow-mark" aria-hidden="true">/</span> Taylor Dahlgren</p>
+      <h1>{{ page.title | escape }}</h1>
+      {% if page.description %}<p class="page-description">{{ page.description | escape }}</p>{% endif %}
+    </header>
+    <div class="prose">
+      {{ content }}
+    </div>
+  </article>
+</div>

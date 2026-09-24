@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="530" viewBox="0 0 1440 530" fill="none">
+  <defs>
+    <linearGradient id="sky" x1="720" y1="0" x2="720" y2="530" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#DDE8D8"/>
+      <stop offset=".58" stop-color="#F1E9D6"/>
+      <stop offset="1" stop-color="#D6DCC9"/>
+    </linearGradient>
+    <linearGradient id="sun" x1="1074" y1="52" x2="1074" y2="284" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E7C16F"/>
+      <stop offset="1" stop-color="#DB946D"/>
+    </linearGradient>
+    <linearGradient id="mountain-back" x1="712" y1="99" x2="712" y2="467" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#B4C3AE"/>
+      <stop offset="1" stop-color="#829984"/>
+    </linearGradient>
+    <linearGradient id="mountain-front" x1="730" y1="195" x2="730" y2="504" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#78917D"/>
+      <stop offset="1" stop-color="#3D6655"/>
+    </linearGradient>
+    <linearGradient id="forest" x1="720" y1="317" x2="720" y2="530" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#345D4D"/>
+      <stop offset="1" stop-color="#1D4236"/>
+    </linearGradient>
+    <pattern id="grain" width="52" height="52" patternUnits="userSpaceOnUse">
+      <circle cx="5" cy="9" r="1" fill="#264638" fill-opacity=".12"/>
+      <circle cx="32" cy="34" r=".8" fill="#264638" fill-opacity=".1"/>
+      <circle cx="46" cy="16" r=".7" fill="#fff" fill-opacity=".22"/>
+    </pattern>
+  </defs>
+  <path fill="url(#sky)" d="M0 0h1440v530H0z"/>
+  <circle cx="1072" cy="154" r="79" fill="url(#sun)" fill-opacity=".94"/>
+  <circle cx="1072" cy="154" r="108" stroke="#9D8060" stroke-opacity=".24"/>
+  <circle cx="1072" cy="154" r="137" stroke="#9D8060" stroke-opacity=".13"/>
+  <path d="M0 353l160-133 112 85 165-177 101 122 127-101 143 152 116-104 125 106 126-143 165 140v230H0V353z" fill="url(#mountain-back)"/>
+  <path d="M339 229l98-101 54 65-36-18-24 28-26-13-25 34-41 5zM719 224l127-123 83 103-44-24-35 29-43-20-37 39-51-4zM1097 231l102-110 66 74-45-18-27 26-39-19-29 31-28 16z" fill="#EDF0E2" fill-opacity=".9"/>
+  <path d="M0 409l118-86 109 40 145-132 113 89 147-101 130 128 115-61 116 47 116-117 124 94 107-81v270H0V409z" fill="url(#mountain-front)"/>
+  <path d="M0 421c137-50 226-24 359-48 142-26 208-3 347 17 166 24 238-17 362-18 151-2 231 42 372 12v146H0V421z" fill="#6F866D"/>
+  <path d="M0 457c130-37 235-16 369-37 164-26 253 12 394 17 143 5 251-31 387-19 123 10 192 30 290 18v94H0v-73z" fill="#536F5B"/>
+  <path d="M0 484c102-28 211-19 332-4 136 17 236-15 381-14 149 1 243 40 379 34 142-7 235-30 348-8v38H0v-46z" fill="url(#forest)"/>
+  <g fill="#214638">
+    <path d="M47 530l33-167 34 167H47zM28 459l51-91 51 91H28zM19 423l60-101 60 101H19z"/>
+    <path d="M149 530l28-141 29 141h-57zM133 467l44-83 44 83h-88zM125 433l52-94 52 94h-104z"/>
+    <path d="M267 530l34-182 35 182h-69zM247 450l54-101 55 101H247zM237 407l64-114 66 114H237z"/>
+    <path d="M1131 530l32-166 33 166h-65zM1112 458l51-93 51 93h-102zM1104 420l59-103 60 103h-119z"/>
+    <path d="M1256 530l29-151 31 151h-60zM1238 465l47-87 48 87h-95zM1231 430l54-96 55 96h-109z"/>
+    <path d="M1361 530l34-181 34 181h-68zM1341 451l54-101 55 101h-109zM1331 409l64-115 65 115h-129z"/>
+  </g>
+  <g fill="#2B5141" fill-opacity=".9">
+    <path d="M376 530l25-126 26 126h-51zM360 476l41-74 42 74h-83zM354 445l47-84 48 84h-95z"/>
+    <path d="M974 530l27-143 28 143h-55zM958 468l43-82 44 82h-87zM950 432l51-91 52 91h-103z"/>
+    <path d="M1048 530l20-108 21 108h-41zM1036 483l32-62 33 62h-65z"/>
+  </g>
+  <path d="M0 0h1440v530H0z" fill="url(#grain)" opacity=".34"/>
+</svg>

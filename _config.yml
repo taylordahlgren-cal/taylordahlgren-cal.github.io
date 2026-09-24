@@ -1,0 +1,29 @@
+title: Taylor Dahlgren
+description: Product, fintech, and thoughtful technology for wealth management.
+url: "https://taylordahlgren-cal.github.io"
+baseurl: ""
+
+markdown: kramdown
+permalink: pretty
+timezone: America/Los_Angeles
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+author:
+  name: Taylor Dahlgren
+  email: taylor_dahlgren@berkeley.edu
+  url: "https://www.linkedin.com/in/taylor-dahlgren"
+
+social:
+  name: Taylor Dahlgren
+  links:
+    - "https://www.linkedin.com/in/taylor-dahlgren"
+    - "https://github.com/taylordahlgren-cal"
+
+exclude:
+  - README.md
+  - PLAN.md
+  - Gemfile
+  - Gemfile.lock
