@@ -14,6 +14,8 @@
   --coral: #bd715a;
   --focus: #9b4e32;
   --button-ink: #fffdf5;
+  --landscape-filter: none;
+  --landscape-opacity: 0.42;
   --shadow: 0 18px 46px rgb(28 48 40 / 8%);
   --serif: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
   --sans: "Avenir Next", Avenir, "Segoe UI", sans-serif;
@@ -37,6 +39,8 @@
   --coral: #e1997d;
   --focus: #f2b48d;
   --button-ink: #17231f;
+  --landscape-filter: invert(1);
+  --landscape-opacity: 0.32;
   --shadow: 0 18px 46px rgb(0 0 0 / 22%);
 }
 
@@ -57,6 +61,8 @@
     --coral: #e1997d;
     --focus: #f2b48d;
     --button-ink: #17231f;
+    --landscape-filter: invert(1);
+    --landscape-opacity: 0.32;
     --shadow: 0 18px 46px rgb(0 0 0 / 22%);
   }
 }
@@ -87,47 +93,20 @@ body::before {
   position: fixed;
   z-index: -1;
   inset: 0;
-  background:
-    linear-gradient(90deg, var(--paper) 0%, color-mix(in srgb, var(--paper) 98%, transparent) 30%, color-mix(in srgb, var(--paper) 86%, transparent) 60%, color-mix(in srgb, var(--paper) 22%, transparent) 100%),
-    url("../images/ridge-contours.svg") center center / cover no-repeat;
+  background: url("../images/hand-drawn-mountains.webp") calc(50% + 200px) calc(50% + 120px) / min(1300px, 100vw) auto no-repeat;
   content: "";
+  filter: var(--landscape-filter);
+  opacity: var(--landscape-opacity);
   pointer-events: none;
 }
 
-:root[data-theme="dark"] body::before {
-  background:
-    linear-gradient(90deg, var(--paper) 0%, color-mix(in srgb, var(--paper) 98%, transparent) 30%, color-mix(in srgb, var(--paper) 86%, transparent) 60%, color-mix(in srgb, var(--paper) 22%, transparent) 100%),
-    url("../images/ridge-contours.svg") center center / cover no-repeat;
-}
-
-:root[data-theme="dark"] body::after {
+body::after {
   position: fixed;
   z-index: -1;
   inset: 0;
-  background: url("../images/ridge-contours.svg") center center / cover no-repeat;
+  background: linear-gradient(90deg, var(--paper) 0%, color-mix(in srgb, var(--paper) 94%, transparent) 30%, color-mix(in srgb, var(--paper) 82%, transparent) 56%, color-mix(in srgb, var(--paper) 12%, transparent) 100%);
   content: "";
-  filter: invert(1);
-  opacity: 0.2;
   pointer-events: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) body::before {
-    background:
-      linear-gradient(90deg, var(--paper) 0%, color-mix(in srgb, var(--paper) 98%, transparent) 30%, color-mix(in srgb, var(--paper) 86%, transparent) 60%, color-mix(in srgb, var(--paper) 22%, transparent) 100%),
-      url("../images/ridge-contours.svg") center center / cover no-repeat;
-  }
-
-  :root:not([data-theme="light"]) body::after {
-    position: fixed;
-    z-index: -1;
-    inset: 0;
-    background: url("../images/ridge-contours.svg") center center / cover no-repeat;
-    content: "";
-    filter: invert(1);
-    opacity: 0.2;
-    pointer-events: none;
-  }
 }
 
 a {
@@ -610,35 +589,14 @@ h4 {
   }
 }
 
-@media (max-width: 560px) {
+@media (max-width: 760px) {
   body::before {
-    background:
-      linear-gradient(180deg, color-mix(in srgb, var(--paper) 68%, transparent) 0%, var(--paper) 49%, color-mix(in srgb, var(--paper) 77%, transparent) 100%),
-      url("../images/ridge-contours.svg") 60% top / 700px auto repeat-y;
+    background-position: center 125px;
+    background-size: max(440px, 100vw) auto;
   }
 
-  :root[data-theme="dark"] body::before {
-    background:
-      linear-gradient(180deg, color-mix(in srgb, var(--paper) 72%, transparent) 0%, var(--paper) 49%, color-mix(in srgb, var(--paper) 80%, transparent) 100%),
-      url("../images/ridge-contours.svg") 60% top / 700px auto repeat-y;
-  }
-
-  :root[data-theme="dark"] body::after {
-    background: url("../images/ridge-contours.svg") 60% top / 700px auto repeat-y;
-    opacity: 0.12;
-  }
-}
-
-@media (max-width: 560px) and (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) body::before {
-    background:
-      linear-gradient(180deg, color-mix(in srgb, var(--paper) 72%, transparent) 0%, var(--paper) 49%, color-mix(in srgb, var(--paper) 80%, transparent) 100%),
-      url("../images/ridge-contours.svg") 60% top / 700px auto repeat-y;
-  }
-
-  :root:not([data-theme="light"]) body::after {
-    background: url("../images/ridge-contours.svg") 60% top / 700px auto repeat-y;
-    opacity: 0.12;
+  body::after {
+    background: linear-gradient(180deg, color-mix(in srgb, var(--paper) 18%, transparent) 0%, color-mix(in srgb, var(--paper) 28%, transparent) 23%, color-mix(in srgb, var(--paper) 93%, transparent) 39%, var(--paper) 62%);
   }
 }
 
