@@ -505,6 +505,49 @@ h4 {
   font-weight: 600;
 }
 
+.education-feature {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 220px;
+  align-items: start;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.education-details h3 {
+  margin-top: 0;
+}
+
+.education-artwork {
+  margin: 0;
+}
+
+.education-artwork img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  box-shadow: var(--shadow);
+}
+
+.education-artwork figcaption {
+  margin-top: 0.7rem;
+  color: var(--ink-soft);
+  font-size: 0.78rem;
+  line-height: 1.55;
+}
+
+@media (max-width: 640px) {
+  .education-feature {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1rem;
+  }
+
+  .education-artwork {
+    width: min(280px, 100%);
+  }
+}
+
 .site-footer {
   border-top: 1px solid var(--line);
   background: color-mix(in srgb, var(--surface-soft) 88%, transparent);

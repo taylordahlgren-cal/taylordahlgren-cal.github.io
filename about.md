@@ -11,13 +11,18 @@ My path has taken me from investment operations and client implementation to a f
 
 ## Education
 
-### UC Berkeley, Haas School of Business
-
-**Master of Business Administration** · Expected May 2027
-
-Fintech VP · Venture Capital VP · Blockchain VP · Redwoods VP · Latin American Business Association VP
-
-Involvement: Tech Club, AI Club, Female Founders & Funders, Women in Leadership
+<section class="education-feature" aria-labelledby="haas-heading">
+  <div class="education-details">
+    <h3 id="haas-heading">UC Berkeley, Haas School of Business</h3>
+    <p><strong>Master of Business Administration</strong> · Expected May 2027</p>
+    <p>Fintech VP · Venture Capital VP · Blockchain VP · Redwoods VP · Latin American Business Association VP</p>
+    <p>Involvement: Tech Club, AI Club, Female Founders &amp; Funders, Women in Leadership</p>
+  </div>
+  <figure class="education-artwork">
+    <img src="{{ '/assets/images/haas-bear-painting.webp' | relative_url }}" alt="My original bear painting in blue, gold, and brown." width="668" height="912" loading="lazy" decoding="async">
+    <figcaption>A bear I painted and gave to Berkeley Haas admissions.</figcaption>
+  </figure>
+</section>
 
 ### Loyola University Chicago
 
