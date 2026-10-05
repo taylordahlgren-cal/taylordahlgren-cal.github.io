@@ -18,7 +18,7 @@ I’m Taylor — a product associate at Nevis and a Berkeley Haas MBA candidate.
 My background spans early-stage product launches, family-office operations, investment implementation, and venture capital. I’m at my best where customer needs, technology, and execution meet.
 
 <ul class="proof-list">
-  <li><strong>0 → 1 product delivery</strong><span>Built, piloted, and launched Nevis’s first customer-facing AI workflow for account opening and money movement.</span></li>
+  <li><strong>0 → 1 product delivery</strong><span>Took an AI workflow for account opening and money movement from MVP through pilot to its first customer launch at Nevis.</span></li>
   <li><strong>Cross-functional leadership</strong><span>Coordinated work across 20+ stakeholders in complex operating environments.</span></li>
   <li><strong>Better operating systems</strong><span>Introduced standardized workflows and KPI practices that reduced errors by 50% at ICONIQ Capital.</span></li>
 </ul>
@@ -27,4 +27,4 @@ My background spans early-stage product launches, family-office operations, inve
 
 When I’m not working on product, I’m usually planning a backpacking trip, finding a great cup of specialty coffee, practicing yoga, or making time for the mountains and tall trees.
 
-<p class="closing-link"><a href="{{ '/about/' | relative_url }}">A little more about me <span aria-hidden="true">↗</span></a></p>
+<p class="closing-link"><a href="{{ '/human/' | relative_url }}">The human side <span aria-hidden="true">↗</span></a></p>
