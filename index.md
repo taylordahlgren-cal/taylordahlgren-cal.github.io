@@ -27,4 +27,4 @@ My background spans early-stage product launches, family-office operations, inve
 
 When I’m not working on product, I’m usually planning a backpacking trip, finding a great cup of specialty coffee, practicing yoga, or making time for the mountains and tall trees.
 
-<p class="closing-link"><a href="{{ '/human/' | relative_url }}">The human side <span aria-hidden="true">↗</span></a></p>
+<p class="closing-link"><a href="{{ '/adventures/' | relative_url }}">Explore my adventures <span aria-hidden="true">↗</span></a></p>

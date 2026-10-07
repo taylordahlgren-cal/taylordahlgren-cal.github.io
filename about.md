@@ -1,14 +1,14 @@
 ---
 layout: page
 title: About
-description: Taylor Dahlgren's professional background and the human side.
-nav_key: human
+description: Product, people, and a life beyond the résumé.
+nav_key: about
 ---
 
-I’m a product builder and operator with a foundation in economics, investing, and client operations. Today, I’m pursuing an MBA at UC Berkeley Haas while working on AI-enabled wealth management products at Nevis.
+I’m Taylor—a product builder and operator, a Berkeley Haas MBA candidate, and someone who makes time for mountains, travel, and making things by hand.
 
-My path has taken me from investment operations and client implementation to a family office environment and early-stage fintech. Across those roles, I’ve gravitated toward work that connects people and systems: learning what customers need, aligning teams around a practical solution, and helping that solution make it into the real world.
+My work has taken me from investment operations and family-office work to AI-enabled wealth management products at Nevis. Across those roles, I focus on understanding what people need and turning complex processes into something practical.
 
-My education and professional background now live together on the Experience page. Art, travel, and interests have a space of their own on the Human page.
+Outside work, that life includes planning events, practicing yoga, scuba diving, backpacking, and painting. This site brings those professional and personal sides together.
 
-<p class="home-actions"><a class="button button-primary" href="{{ '/work-experience/' | relative_url }}">Education &amp; experience <span aria-hidden="true">→</span></a><a class="text-link" href="{{ '/human/' | relative_url }}">The human side <span aria-hidden="true">↗</span></a></p>
+<p class="home-actions"><a class="button button-primary" href="{{ '/work-experience/' | relative_url }}">My experience <span aria-hidden="true">→</span></a><a class="text-link" href="{{ '/adventures/' | relative_url }}">Beyond work <span aria-hidden="true">↗</span></a></p>

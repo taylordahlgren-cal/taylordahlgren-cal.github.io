@@ -583,7 +583,7 @@ h4 {
   font-weight: 650;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 1020px) {
   html {
     scroll-padding-top: 9rem;
   }
@@ -602,10 +602,23 @@ h4 {
 
   .primary-nav {
     order: 3;
+    display: grid;
     width: 100%;
-    justify-content: space-between;
-    gap: 0.4rem;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    justify-content: stretch;
+    gap: 0.15rem 0.4rem;
     padding-top: 0.25rem;
+  }
+
+  .primary-nav a {
+    justify-self: center;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 760px) {
+  html {
+    scroll-padding-top: 9rem;
   }
 
   .primary-nav a {
@@ -633,6 +646,17 @@ h4 {
 
   .page-wrap {
     padding-bottom: 3.6rem;
+  }
+}
+
+@media (max-width: 560px) {
+  html {
+    scroll-padding-top: 11rem;
+  }
+
+  .primary-nav {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    row-gap: 0.1rem;
   }
 }
 
