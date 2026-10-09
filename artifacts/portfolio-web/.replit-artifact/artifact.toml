@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/portfolio/"
+title = "Taylor Dahlgren Portfolio"
+description = "Website Preview for the existing Jekyll portfolio, using the same generated pages and assets without changing the site or publishing setup."
+version = "1.0.0"
+id = "artifacts/portfolio-web"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/portfolio/" ]
+localPort = 26183
+
+[services.development]
+run = "pnpm --filter @workspace/portfolio-web run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/portfolio-web", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/portfolio-web/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "26183"
+BASE_PATH = "/portfolio/"
