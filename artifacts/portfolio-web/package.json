@@ -1,0 +1,11 @@
+{
+  "name": "@workspace/portfolio-web",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node preview-server.mjs",
+    "serve": "node preview-server.mjs",
+    "build": "cd ../.. && bundle exec jekyll build --destination artifacts/portfolio-web/dist/public"
+  }
+}
