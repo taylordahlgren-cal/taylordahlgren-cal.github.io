@@ -684,22 +684,16 @@ h4 {
 
 .work-tiles {
   display: grid;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: clamp(0.9rem, 2vw, 1.35rem);
   align-items: stretch;
 }
 
 .work-tile {
   min-width: 0;
-  min-height: 340px;
+  min-height: 380px;
   perspective: 1200px;
 }
-
-.work-tile--nevis { grid-column: span 7; }
-.work-tile--iconiq { grid-column: span 5; }
-.work-tile--aperio { grid-column: span 5; }
-.work-tile--fisher { grid-column: span 7; }
-.work-tile--illuminate { grid-column: 4 / span 6; }
 
 .work-tile-control {
   position: relative;
@@ -737,9 +731,8 @@ h4 {
 }
 
 .tile-number {
-  position: absolute;
-  top: 0.15rem;
-  left: 0;
+  flex: none;
+  margin-bottom: 0.75rem;
   color: var(--coral);
   font-family: var(--serif);
   font-size: 0.85rem;
@@ -748,6 +741,7 @@ h4 {
 
 .company-mark {
   display: flex;
+  flex: none;
   width: min(100%, 250px);
   height: 80px;
   align-items: center;
@@ -777,8 +771,6 @@ h4 {
 }
 
 .company-mark--wordmark {
-  height: auto;
-  min-height: 80px;
   color: var(--forest);
   font-family: var(--serif);
   font-size: 1.7rem;
@@ -789,6 +781,8 @@ h4 {
 
 .tile-role {
   max-width: 19ch;
+  min-height: 2.24em;
+  flex: none;
   color: var(--ink);
   font-family: var(--serif);
   font-size: clamp(1.4rem, 2.7vw, 1.85rem);
@@ -885,7 +879,7 @@ h4 {
 /* Progressive enhancement: a single physical tile turns, while the button remains the control. */
 .work-tiles-ready .work-tile-control {
   display: block;
-  min-height: 340px;
+  min-height: 380px;
   padding: 0;
   overflow: visible;
   transform-style: preserve-3d;
@@ -1042,17 +1036,9 @@ h4 {
     gap: 0.9rem;
   }
 
-  .work-tile--nevis,
-  .work-tile--iconiq,
-  .work-tile--aperio,
-  .work-tile--fisher,
-  .work-tile--illuminate {
-    grid-column: 1;
-  }
-
   .work-tile,
   .work-tiles-ready .work-tile-control {
-    min-height: 340px;
+    min-height: 380px;
   }
 
   .work-tiles-ready .work-tile-face {
