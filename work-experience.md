@@ -15,7 +15,7 @@ permalink: /work-experience/
       <button class="work-tile-control" type="button" aria-expanded="true">
         <span class="work-tile-face work-tile-front">
           <span class="tile-number" aria-hidden="true">01</span>
-          <span class="company-mark"><img src="{{ '/assets/images/companies/nevis.png' | relative_url }}" alt="Nevis" width="240" height="88"></span>
+          <span class="company-mark"><img src="{{ '/assets/images/companies/nevis.svg' | relative_url }}" alt="Nevis" width="240" height="66"></span>
           <span class="tile-role">Product</span>
           <span class="tile-tease">AI workflows, from MVP to first customer</span>
           <span class="tile-flip-hint" aria-hidden="true">Explore <span>↗</span></span>
@@ -32,7 +32,7 @@ permalink: /work-experience/
       <button class="work-tile-control" type="button" aria-expanded="true">
         <span class="work-tile-face work-tile-front">
           <span class="tile-number" aria-hidden="true">02</span>
-          <span class="company-mark"><img src="{{ '/assets/images/companies/iconiq.png' | relative_url }}" alt="ICONIQ Capital" width="240" height="88"></span>
+          <span class="company-mark"><img src="{{ '/assets/images/companies/iconiq.svg' | relative_url }}" alt="ICONIQ Capital" width="240" height="57"></span>
           <span class="tile-role">Vice President</span>
           <span class="tile-tease">Family-office operations &amp; client experience</span>
           <span class="tile-flip-hint" aria-hidden="true">Explore <span>↗</span></span>
