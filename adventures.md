@@ -15,6 +15,7 @@ description: Travel, scuba, yoga, and making things by hand.
       <li><a href="#scuba">Scuba</a></li>
       <li><a href="#yoga">Yoga</a></li>
       <li><a href="#artwork">Artwork</a></li>
+      <li><a href="{{ '/education/' | relative_url }}">Education</a></li>
     </ul>
   </nav>
 
@@ -34,7 +35,7 @@ description: Travel, scuba, yoga, and making things by hand.
 
   <section class="human-story" aria-labelledby="yoga">
     <h2 id="yoga">Yoga</h2>
-    <p>I practice yoga and have completed teacher training.</p>
+    <p>I practice yoga and completed a 200-hour teacher training.</p>
   </section>
 
   <section class="human-story" aria-labelledby="artwork">
@@ -42,7 +43,7 @@ description: Travel, scuba, yoga, and making things by hand.
     <div class="human-artwork">
       <div class="human-artwork-copy">
         <p>I painted this bear and gave it to Berkeley Haas admissions.</p>
-        <p class="human-thread">A small part of my path to <a href="{{ '/work-experience/' | relative_url }}#education">Berkeley Haas</a>.</p>
+          <p class="human-thread">A small part of my path to <a href="{{ '/education/' | relative_url }}#education">Berkeley Haas</a>.</p>
       </div>
       <figure>
         <img src="{{ '/assets/images/haas-bear-painting.webp' | relative_url }}" alt="My original bear painting in blue, gold, and brown." width="668" height="912" loading="lazy" decoding="async">
@@ -51,5 +52,5 @@ description: Travel, scuba, yoga, and making things by hand.
     </div>
   </section>
 
-  <p class="human-thread">A few other interests: Spanish (advanced proficiency) and specialty coffee.</p>
+  <p class="human-thread">A few other interests: Spanish (advanced proficiency), specialty coffee, and backpacking. <a href="{{ '/education/' | relative_url }}">My education and academic milestones</a> have their own page.</p>
 </div>
