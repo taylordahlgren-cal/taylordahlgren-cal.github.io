@@ -704,7 +704,7 @@ h4 {
   padding: 1.4rem 1.55rem;
   overflow: hidden;
   border: 1px solid var(--line);
-  border-radius: 3px;
+  border-radius: 18px;
   background: color-mix(in srgb, var(--surface) 91%, transparent);
   color: var(--tile-ink);
   text-align: left;
