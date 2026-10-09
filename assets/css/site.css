@@ -876,19 +876,18 @@ h4 {
   font-weight: 700;
 }
 
-/* Progressive enhancement: a single physical tile turns, while the button remains the control. */
+/* Keep the hit area stationary; only its non-interactive faces rotate. */
 .work-tiles-ready .work-tile-control {
   display: block;
   min-height: 380px;
   padding: 0;
   overflow: visible;
   transform-style: preserve-3d;
-  transition: transform 560ms cubic-bezier(0.2, 0.72, 0.18, 1), border-color 220ms ease, box-shadow 220ms ease;
+  transition: border-color 220ms ease, box-shadow 220ms ease;
   cursor: pointer;
 }
 
 .work-tiles-ready .work-tile-control[aria-expanded="true"] {
-  transform: rotateY(180deg);
   border-color: color-mix(in srgb, var(--coral) 56%, var(--line));
   box-shadow: 0 14px 32px color-mix(in srgb, var(--ink) 12%, transparent);
 }
@@ -898,6 +897,9 @@ h4 {
   inset: 0;
   min-height: 0;
   padding: 1.4rem 1.55rem;
+  pointer-events: none;
+  border-radius: inherit;
+  transition: transform 560ms cubic-bezier(0.2, 0.72, 0.18, 1);
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
 }
@@ -905,19 +907,20 @@ h4 {
 .work-tiles-ready .work-tile-front {
   justify-content: center;
   transform: rotateY(0);
+  background: var(--surface);
 }
 
 .work-tiles-ready .work-tile-back {
-  transform: rotateY(180deg);
+  transform: rotateY(-180deg);
   background: color-mix(in srgb, var(--surface) 96%, var(--moss));
 }
 
-.work-tiles-ready .work-tile-back[aria-hidden="true"] {
-  visibility: hidden;
+.work-tiles-ready .work-tile-control[aria-expanded="true"] .work-tile-front {
+  transform: rotateY(180deg);
 }
 
-.work-tiles-ready .work-tile-back[aria-hidden="false"] {
-  visibility: visible;
+.work-tiles-ready .work-tile-control[aria-expanded="true"] .work-tile-back {
+  transform: rotateY(0);
 }
 
 .work-tiles-ready .work-tile-control:hover:not([aria-expanded="true"]) {
@@ -1060,12 +1063,9 @@ h4 {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .work-tiles-ready .work-tile-control {
+  .work-tiles-ready .work-tile-control,
+  .work-tiles-ready .work-tile-face {
     transition: none;
-  }
-
-  .work-tiles-ready .work-tile-control[aria-expanded="true"] {
-    transform: none;
   }
 
   .work-tiles-ready .work-tile-control[aria-expanded="true"] .work-tile-front {
