@@ -11,7 +11,7 @@ nav_key: home
 
 I’m Taylor — a product associate at Nevis and a Berkeley Haas MBA candidate. I turn complex wealth-management needs into practical, customer-centered workflows.
 
-<p class="home-actions"><a class="button button-primary" href="{{ '/work-experience/' | relative_url }}">Explore my experience <span aria-hidden="true">→</span></a><a class="text-link" href="{{ '/contact/' | relative_url }}">Get in touch</a></p>
+<p class="home-actions"><a class="button button-primary" href="{{ '/work-experience/' | relative_url }}">Explore my work <span aria-hidden="true">→</span></a><a class="text-link" href="{{ '/education/' | relative_url }}">Education</a><a class="text-link" href="{{ '/contact/' | relative_url }}">Get in touch</a></p>
 
 ## Work shaped by real-world complexity
 

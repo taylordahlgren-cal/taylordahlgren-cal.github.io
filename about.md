@@ -11,4 +11,4 @@ My work has taken me from investment operations and family-office work to AI-ena
 
 Outside work, that life includes planning events, practicing yoga, scuba diving, backpacking, and painting. This site brings those professional and personal sides together.
 
-<p class="home-actions"><a class="button button-primary" href="{{ '/work-experience/' | relative_url }}">My experience <span aria-hidden="true">→</span></a><a class="text-link" href="{{ '/adventures/' | relative_url }}">Beyond work <span aria-hidden="true">↗</span></a></p>
+<p class="home-actions"><a class="button button-primary" href="{{ '/work-experience/' | relative_url }}">Explore my work <span aria-hidden="true">→</span></a><a class="text-link" href="{{ '/education/' | relative_url }}">Education <span aria-hidden="true">↗</span></a><a class="text-link" href="{{ '/adventures/' | relative_url }}">Beyond work <span aria-hidden="true">↗</span></a></p>

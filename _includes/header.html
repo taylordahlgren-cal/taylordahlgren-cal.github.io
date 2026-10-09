@@ -5,7 +5,7 @@
       <span class="brand-name">Taylor Dahlgren</span>
     </a>
     <nav class="primary-nav" aria-label="Main navigation">
-      {% assign nav_items = "About|/about/|about,Experience|/work-experience/|experience,Leadership|/leadership/|leadership,Adventures|/adventures/|adventures,Projects|/projects/|projects,Contact|/contact/|contact" | split: "," %}
+      {% assign nav_items = "About|/about/|about,Work|/work-experience/|work,Education|/education/|education,Leadership|/leadership/|leadership,Adventures|/adventures/|adventures,Projects|/projects/|projects,Contact|/contact/|contact" | split: "," %}
       {% for item in nav_items %}
         {% assign parts = item | split: "|" %}
         <a href="{{ parts[1] | relative_url }}"{% if page.nav_key == parts[2] %} aria-current="page"{% endif %}>{{ parts[0] }}</a>
