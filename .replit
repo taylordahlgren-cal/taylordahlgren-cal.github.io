@@ -6,3 +6,8 @@ runButton = "Project"
 [[ports]]
 localPort = 5000
 externalPort = 80
+
+[deployment]
+deploymentTarget = "static"
+build = ["sh", "-c", "bundle config set --local path vendor/bundle && bundle install && bundle exec jekyll build"]
+publicDir = "_site"
